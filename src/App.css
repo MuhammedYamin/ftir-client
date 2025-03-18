@@ -20,7 +20,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   overflow: hidden; /* Prevent content from spilling out */
-  margin-top: 20%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* Heading Styling */
@@ -83,12 +84,31 @@ button:hover:not(:disabled) {
 /* Results Container */
 .results-container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-  transition: all 0.5s ease-in-out;
-  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
+
+.results-section {
+  flex: 1;
+  background: #39394f;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Table Section Styling */
+.table-section {
+  flex: 1;
+  background: #39394f;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  min-width: 45%;
+  
+}
+
 
 /* Left Content */
 .left-content {
@@ -106,15 +126,7 @@ button:hover:not(:disabled) {
 }
 
 
-.results-section {
-  background: #39394f;
-  border-radius: 8px;
-  padding: 0 15px 15px 15px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  margin-bottom: 10px; /* Reduced the gap between sections */
-  max-height: 300px;
-  overflow: hidden; /* Prevent overflow of section contents */
-}
+
 
 .fixed-heading {
   padding: 10px;
@@ -125,7 +137,7 @@ button:hover:not(:disabled) {
   position: sticky; /* Make the heading sticky */
   top: 0; /* Stick to the top of the section */
   z-index: 10; /* Ensure the heading stays above the content */
-  border-bottom: 2px solid #444; /* Add a bottom border to visually separate the heading */
+  border-bottom: 2px solid #000000; /* Add a bottom border to visually separate the heading */
 }
 
 .scrollable {
@@ -139,17 +151,19 @@ button:hover:not(:disabled) {
 
 
 /* Image Container */
+/* Center Image */
 .image-container {
   text-align: center;
-  margin-top: -50px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .spectrum-image {
   width: 800px; /* Increased image size */
   height: auto;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
 }
 
 /* Error Styling */
@@ -207,3 +221,58 @@ button:hover:not(:disabled) {
     opacity: 1;
   }
 }
+
+/* Table Styling */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #ffffff; /* Dark table background */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Ensure Tables are Side-by-Side */
+.tables-container {
+  display: flex;
+  justify-content: center; /* Center the tables */
+  width: 100%;
+  max-width: 1500px;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+
+.results-table th,
+.results-table td {
+  border: 1px solid #000000; /* Borders for both rows and columns */
+  padding: 10px;
+  text-align: center;
+  color: #000000; /* White text for better visibility */
+}
+
+.results-table thead {
+  background-color: #e8e8e8; /* Highlighted header */
+  color: #1e1e2f;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.results-table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* Alternating row color */
+}
+
+.results-table tbody tr:hover {
+  background-color: #bfbfbf; /* Highlight on hover */
+}
+
+/* Ensure responsive table on smaller screens */
+@media (max-width: 768px) {
+  .results-table th,
+  .results-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+
