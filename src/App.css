@@ -14,15 +14,16 @@ body {
 /* Container Styling */
 .container {
   text-align: center;
-  width: 1200px; /* Adjust width to fit screen */
+  width: 1200px;
   padding: 20px;
   background: #2e2e3e;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  overflow: hidden; /* Prevent content from spilling out */
-  margin-top: 30px;
-  margin-bottom: 30px;
+  overflow: hidden;
+  margin: 300px auto; /* Center horizontally with auto left/right margins */
 }
+
+
 
 /* Heading Styling */
 h1,
